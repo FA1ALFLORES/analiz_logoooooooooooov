@@ -1,0 +1,41 @@
+# Python кэш и скомпилированные файлы
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Виртуальные окружения
+venv/
+env/
+.venv/
+ENV/
+
+# IDE и редакторы
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Операционные системы
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Временные файлы
+*.log
+*.tmp
+*.temp
+*.bak
+
+# Тестовые файлы (можно создавать для тестов, но не коммитить)
+test_*.log
+access_test.log
+
+# Файлы логов (обычно их не хранят в Git)
+*.log
