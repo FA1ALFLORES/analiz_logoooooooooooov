@@ -1,11 +1,4 @@
 #!/usr/bin/env python3
-"""
-Главный файл для запуска анализатора логов.
-Использование:
-    python main.py access.log      # Анализ файла логов
-    python main.py --test          # Запуск тестов
-"""
-
 import sys
 import argparse
 
@@ -14,7 +7,7 @@ try:
     # Импортируем из analizator.py
     from analizator import analyze_log_file, print_result
 except ImportError as e:
-    print(f"❌ Ошибка импорта из analizator.py: {e}")
+    print(f"Ошибка импорта из analizator.py: {e}")
     print("Убедитесь, что файл analizator.py находится в той же папке")
     sys.exit(1)
 
@@ -22,9 +15,8 @@ try:
     # Импортируем из test1.py
     from test1 import run_all_tests
 except ImportError:
-    print("⚠️  Файл test1.py не найден или в нём нет функции run_all_tests()")
+    print("Файл test1.py не найден или в нём нет функции run_all_tests()")
     print("Тесты будут недоступны")
-
 
 def main():
     """Основная функция приложения"""
@@ -54,7 +46,7 @@ def main():
         try:
             run_all_tests()
         except NameError:
-            print("❌ Функция run_all_tests() не найдена")
+            print("Функция run_all_tests() не найдена")
             print("Проверьте содержимое файла test1.py")
             sys.exit(1)
             
@@ -65,10 +57,10 @@ def main():
             results = analyze_log_file(args.filename)
             print_result(results)
         except FileNotFoundError:
-            print(f"❌ Ошибка: файл '{args.filename}' не найден")
+            print(f"Ошибка: файл '{args.filename}' не найден")
             sys.exit(1)
         except Exception as e:
-            print(f"❌ Ошибка при анализе: {e}")
+            print(f"Ошибка при анализе: {e}")
             sys.exit(1)
             
     else:
