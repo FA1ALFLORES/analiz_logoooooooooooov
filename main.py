@@ -52,7 +52,7 @@ def main():
             
     elif args.filename:
         # Анализируем файл логов
-        print(f"\n📊 Анализ логов из файла: {args.filename}")
+        print(f" Анализ логов из файла: {args.filename}")
         try:
             results = analyze_log_file(args.filename)
             print_result(results)
